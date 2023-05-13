@@ -5,21 +5,25 @@
   list-style: none;
   text-decoration: none;
 }
-
 body {
   background-color: #f7eff188;
 }
-.navbar {
-  position: fixed;
-  top: 0;
+header {
+  display: flex;
   background-color: rgb(255, 255, 255);
   width: 100%;
+  position: fixed;
+  top: 0;
+  justify-content: center;
+}
+.navbar {
   display: flex;
+  width: 100%;
+  max-width: 1400px;
   justify-content: space-between;
   align-items: center;
-  color: rgb(0, 0, 0);
-  flex-wrap: wrap;
-  padding: 0.5em;
+  font-size: 1.4rem;
+  font-family: "Lilita One", cursive;
 }
 .navbar img {
   margin-left: 1em;
@@ -36,8 +40,6 @@ body {
   display: flex;
 }
 .navbar__ul li {
-  font-size: 1.4rem;
-  font-family: "Lilita One", cursive;
   margin-right: 0.8em;
 }
 .navbar__ul a {
@@ -47,20 +49,20 @@ body {
   font-size: 0.6rem;
   margin-right: 1em;
 }
-HEADER {
-  margin-top: 5em;
-}
 .main {
+  max-width: 1400px;
+  margin: 5em auto;
   padding: 1em;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
 }
 .main__div:first-child {
-  width: 50%;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 3rem;
   transform: rotate(-9deg);
   -webkit-transform: rotate(-9deg);
   -moz-transform: rotate(-9deg);
@@ -68,13 +70,12 @@ HEADER {
   -o-transform: rotate(-9deg);
 }
 .main__div:nth-child(2) {
-  width: 50%;
+  flex: 1 1 auto;
   display: flex;
   justify-content: center;
 }
 .main__div > span {
   font-family: "Raleway", sans-serif;
-  font-size: 4rem;
 }
 .main__div span:nth-child(3) {
   color: #8734a4;
@@ -138,35 +139,10 @@ HEADER {
     display: block;
   }
   .navbar {
-    max-width: 485px;
-    min-width: 250px;
     justify-content: space-around;
   }
 
   .navbar__ul {
     display: none;
-  }
-}
-@media screen and (max-width: 939px) {
-  .main {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .main__div:first-child {
-    order: 1;
-    transform: rotate(0);
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -o-transform: rotate(0);
-  }
-  .main__div:nth-child(2) {
-    padding-bottom: 2em;
-  }
-  .main__div > span {
-    font-family: "Raleway", sans-serif;
-    font-size: 6vw;
-    text-align: center;
   }
 }
