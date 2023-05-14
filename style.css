@@ -10,7 +10,7 @@
 /* ========  ======== */
 /* ======== BODY ======== */
 body {
-  background-color: rgb(246, 238, 238);
+  background-color: rgb(255, 255, 255);
 }
 
 /* ======== head  ======== */
@@ -19,7 +19,6 @@ body {
   top: 0;
   width: 100%;
   padding: 1em;
-  background-color: rgb(255, 255, 255);
   z-index: 10000;
 }
 .header__nav {
@@ -154,11 +153,19 @@ body {
 @media (max-width: 767.98px) {
   /* ======== MAIN ======== */
   .main {
-    margin: 28px auto;
+    margin: 40px auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+  .main__article-1 {
+    margin-top: 1em;
+    order: 2;
+  }
+  .main__article-2 {
+    order: 1;
+  }
+
   .main__article__span {
     font-size: 3.063rem;
     transform: rotate(0);
@@ -166,10 +173,6 @@ body {
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
     -o-transform: rotate(0);
-  }
-  .main__article-1 {
-    flex-grow: 1;
-    margin-top: 2em;
   }
 }
 /* `sm` applies t.o x-small devices (portrait phones, less than 576px) */
@@ -190,15 +193,17 @@ body {
   }
   /* ======== MAIN ======== */
   .main__article-1 {
-    margin-top: 3em;
+    margin-top: 1em;
     order: 2;
   }
   .main__article-2 {
     order: 1;
   }
   .main__nav {
+    margin-top: 1em;
     order: 3;
     display: flex;
+    width: 100%;
   }
   .main__article__span {
     font-size: 2.5rem;
@@ -206,7 +211,8 @@ body {
 
   .main__nav__ul {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
   }
   .main__nav__ul__li {
     margin-right: 0.5em;
@@ -214,6 +220,6 @@ body {
     font-family: "Raleway", sans-serif;
   }
   .main__nav__ul__li-a {
-    color: #8e36ae;
+    color: #000000;
   }
 }
