@@ -172,8 +172,9 @@ body {
     margin-top: 2em;
   }
 }
-/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+/* `sm` applies t.o x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  /* ======== HEAD ======== */
   .header__nav__ul {
     display: none;
   }
@@ -187,13 +188,22 @@ body {
     display: block;
     width: 42px;
   }
+  /* ======== MAIN ======== */
+  .main__article-1 {
+    margin-top: 3em;
+    order: 2;
+  }
+  .main__article-2 {
+    order: 1;
+  }
+  .main__nav {
+    order: 3;
+    display: flex;
+  }
   .main__article__span {
     font-size: 2.5rem;
   }
-  .main__nav {
-    margin-top: 2em;
-    display: flex;
-  }
+
   .main__nav__ul {
     display: flex;
     justify-content: center;
