@@ -110,6 +110,9 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+.main__nav {
+  display: none;
+}
 /* ======== ANIMACIONES ======== */
 @keyframes imagenSaltante {
   from {
@@ -151,7 +154,10 @@ body {
 @media (max-width: 767.98px) {
   /* ======== MAIN ======== */
   .main {
-    flex-direction: column-reverse;
+    margin: 28px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .main__article__span {
     font-size: 3.063rem;
@@ -162,6 +168,7 @@ body {
     -o-transform: rotate(0);
   }
   .main__article-1 {
+    flex-grow: 1;
     margin-top: 2em;
   }
 }
@@ -179,5 +186,24 @@ body {
   .header__nav__menu {
     display: block;
     width: 42px;
+  }
+  .main__article__span {
+    font-size: 2.5rem;
+  }
+  .main__nav {
+    margin-top: 2em;
+    display: flex;
+  }
+  .main__nav__ul {
+    display: flex;
+    justify-content: center;
+  }
+  .main__nav__ul__li {
+    margin-right: 0.5em;
+    font-size: 1.2rem;
+    font-family: "Raleway", sans-serif;
+  }
+  .main__nav__ul__li-a {
+    color: #8e36ae;
   }
 }
