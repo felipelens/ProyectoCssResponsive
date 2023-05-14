@@ -8,9 +8,13 @@
   list-style: none;
 }
 /* ========  ======== */
+html {
+  height: 100%;
+}
 /* ======== BODY ======== */
 body {
   background-color: rgb(255, 255, 255);
+  height: 100%;
 }
 
 /* ======== head  ======== */
@@ -20,13 +24,14 @@ body {
   width: 100%;
   padding: 1em;
   z-index: 10000;
+  background-color: rgb(255, 255, 255);
 }
 .header__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -44,6 +49,7 @@ body {
 .header__nav__ul {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .header__nav__ul__li {
   margin-right: 0.5em;
@@ -54,16 +60,12 @@ body {
   color: #8e36ae;
 }
 /* ================================================================ */
-.header__nav__icon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+
 .header__nav__icon__li {
   margin-right: 0.5em;
 }
 .header__nav__icon__li__a__img {
-  width: 46px;
+  width: 70px;
 }
 .header__nav__icon__li__a__img:hover {
   animation-name: imagenSaltante;
@@ -74,22 +76,23 @@ body {
 /* ======== MAIN ======== */
 .main {
   max-width: 1400px;
-  margin: 90px auto;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
   padding: 2em;
+  justify-content: space-around;
 }
 .main__article {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1 1 50%;
 }
 .main__article-1 {
   flex-direction: column;
   text-align: center;
 }
 .main__article__span {
-  font-size: 4rem;
+  font-size: 6vw;
   font-family: "Raleway", sans-serif;
   transform: rotate(-6deg);
   -webkit-transform: rotate(-6deg);
@@ -102,7 +105,7 @@ body {
 }
 .main__article__img {
   object-fit: cover;
-  width: 60%;
+  width: 70%;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -110,6 +113,9 @@ body {
   -o-border-radius: 50%;
 }
 .main__nav {
+  display: none;
+}
+.main__article-4 {
   display: none;
 }
 /* ======== ANIMACIONES ======== */
@@ -131,7 +137,10 @@ body {
 }
 /*  ======== MEDIA QUERIES ======== */
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {
+@media (min-width: 1399.98px) {
+  .main__article__span {
+    font-size: 6rem;
+  }
 }
 /* `xl` applies to large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
@@ -139,11 +148,14 @@ body {
 /* `lg` applies to medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
   /* ======== MAIN ======== */
+  .header__nav__ul__li {
+    font-size: 2.5vw;
+  }
   .header__nav__img {
     width: 6rem;
   }
   .header__nav__icon__li__a__img {
-    width: 30px;
+    width: 60px;
   }
   .main__article__span {
     font-size: 6.4vw;
@@ -153,13 +165,16 @@ body {
 @media (max-width: 767.98px) {
   /* ======== MAIN ======== */
   .main {
-    margin: 40px auto;
+    margin: 0 auto;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    transform: translateY(2em);
+    -webkit-transform: translateY(2em);
+    -moz-transform: translateY(2em);
+    -ms-transform: translateY(2em);
+    -o-transform: translateY(2em);
   }
   .main__article-1 {
-    margin-top: 1em;
     order: 2;
   }
   .main__article-2 {
@@ -192,21 +207,42 @@ body {
     width: 42px;
   }
   /* ======== MAIN ======== */
+  .main {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+
   .main__article-1 {
-    margin-top: 1em;
     order: 2;
   }
   .main__article-2 {
     order: 1;
   }
-  .main__nav {
-    margin-top: 1em;
+  .main__article-3 {
     order: 3;
     display: flex;
     width: 100%;
   }
+  .main__article-4 {
+    width: 100%;
+    display: flex;
+    order: 4;
+  }
+  .main__article__ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .main__article__icon__li__a__img {
+    width: 60px;
+  }
+
   .main__article__span {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .main__nav__ul {
@@ -215,8 +251,7 @@ body {
     justify-content: space-around;
   }
   .main__nav__ul__li {
-    margin-right: 0.5em;
-    font-size: 1.2rem;
+    font-size: 5vw;
     font-family: "Raleway", sans-serif;
   }
   .main__nav__ul__li-a {
