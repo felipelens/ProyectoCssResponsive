@@ -30,12 +30,12 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 /* ================================================================ */
 .header__nav__img {
   width: 8rem;
+  margin-right: 4.5em;
 }
 .header__nav__img:hover {
   animation-name: imagenSaltante;
@@ -46,11 +46,10 @@ body {
 /* ================================================================ */
 .header__nav__ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .header__nav__ul__li {
   margin-right: 0.5em;
+
   font-size: 1.5rem;
   font-family: "Raleway", sans-serif;
 }
@@ -146,6 +145,10 @@ body {
 /* `lg` applies to medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
   /* ======== MAIN ======== */
+  .header__nav__img {
+    width: 8rem;
+    margin-right: 6em;
+  }
   .header__nav__ul__li {
     font-size: 2.5vw;
   }
@@ -159,33 +162,14 @@ body {
     font-size: 6.4vw;
   }
 }
-/* `md` applies to small devices (landscape phones, less than 768px) */
-@media (min-width: 76751.98px) {
-  /* ======== MAIN ======== */
-  .main {
-    margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-  }
-  .main__article-1 {
-    order: 2;
-  }
-  .main__article-2 {
-    order: 1;
-  }
 
-  .main__article__span {
-    font-size: 3.063rem;
-    transform: rotate(0);
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -o-transform: rotate(0);
-  }
-}
 /* `sm` applies t.o x-small devices (portrait phones, less than 576px) */
 @media (max-width: 767.98px) {
   /* ======== HEAD ======== */
+  .header__nav__img {
+    width: 8rem;
+    margin-right: 0;
+  }
   .header__nav__ul {
     display: none;
   }
@@ -205,9 +189,15 @@ body {
     flex-direction: column;
     align-items: center;
   }
-
   .main__article-1 {
     order: 2;
+  }
+  .main__article__span {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
   }
   .main__article-2 {
     order: 1;
