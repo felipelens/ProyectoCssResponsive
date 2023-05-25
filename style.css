@@ -17,7 +17,6 @@ html {
   height: 100vh;
   width: 100vw;
 }
-
 *,
 *:before,
 *:after {
@@ -34,7 +33,6 @@ body {
   height: 100vh;
 }
 /* ========================= Font size Responsive Fluid  =========================*/
-
 /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1400,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
@@ -48,7 +46,6 @@ body {
   --step-5: clamp(2.33rem, calc(1.27rem + 5.3vw), 5.91rem);
   --step-6: clamp(2.8rem, calc(1.44rem + 6.8vw), 7.39rem);
 }
-
 .step--2 {
   font-size: var(--step--2);
 }
@@ -76,7 +73,6 @@ body {
 .step-6 {
   font-size: var(--step-6);
 }
-
 /* ======== BODY ======== */
 body {
   background-color: rgb(250, 244, 244);
@@ -88,7 +84,7 @@ body {
 }
 .header__nav {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1400px;
   display: flex;
   width: 100%;
   align-items: center;
@@ -129,7 +125,7 @@ body {
 }
 /* ======== MAIN ======== */
 .main {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 10em auto;
   display: flex;
 }
@@ -155,15 +151,12 @@ body {
   color: #8e36ae;
 }
 /* ================================================================== */
-
 .article__img {
   object-fit: cover;
   max-width: clamp(100px, 50%, 350px);
   clip-path: circle();
 }
-
 /* ======== ANIMACIONES ======== */
-
 /*  ======== MEDIA QUERIES ======== */
 /* 1399.98px */
 @media (max-width: 87.49875em) {
@@ -208,7 +201,6 @@ body {
   .iconRedes__a {
     width: calc(50px + 10vw);
   }
-
   /* ======== main  ======== */
   .main {
     margin: 0 auto;
@@ -235,12 +227,11 @@ body {
     font-size: var(--step-2);
   }
 }
-
 /* ================================= SOBRE MI ========================================= */
 .sobreMi__h2 {
   font-family: "Raleway", sans-serif;
-  text-align: center;
-  margin-bottom: 10px;
+  font-size: var(--step-0);
+  margin: 1rem auto;
 }
 /* ======== Main ======== */
 .sobreMi {
@@ -251,35 +242,67 @@ body {
 .sobreMi::before {
   content: " ";
   position: absolute;
-  width: 5px;
+  width: 4px;
   height: 100%;
   background-color: #000000;
   top: 0;
   left: 50%;
 }
-
+/* ================================================================== */
 .sobreMi__container {
   width: 50%;
   position: relative;
   padding: 10px 40px;
 }
-
+/* ================================================================== */
 .sobreMi__container__text {
   display: flex;
   flex-direction: column;
   background-color: #bb7dd4;
   padding: 1em;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
+.sobreMi__container__h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: #ffff;
+}
+.sobreMi__container__h3 {
+  font-size: var(--step--1);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.sobreMi__container__p {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--step--2);
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.5em;
+}
+.sobreMi__container__p-span {
+  color: #000000;
+  font-weight: 700;
+}
+.sobreMi__container__ul {
+  margin-top: 0.8em;
+  margin-left: 1em;
+}
+.sobreMi__container__ul__li {
+  list-style: circle;
+  margin-top: 0.2em;
+}
+.sobreMi__container__ul__li__a {
+  font-size: var(--step--2);
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+/* ================================================================== */
 .sobreMi__left {
   left: 0;
-}
-.sobreMi__right {
-  left: 50%;
 }
 .sobreMi__left::after {
   content: " ";
@@ -290,10 +313,6 @@ body {
   top: 43%;
   background: #bb7dd4;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
 .sobreMi__left::before {
   content: " ";
@@ -305,6 +324,10 @@ body {
   background-color: #bb7dd4;
   clip-path: polygon(50% 0%, 0 72%, 100% 72%);
   rotate: 90deg;
+}
+/* ================================================================== */
+.sobreMi__right {
+  left: 50%;
 }
 .sobreMi__right::after {
   content: " ";
@@ -331,59 +354,17 @@ body {
   clip-path: polygon(50% 0%, 0 72%, 100% 72%);
   rotate: -90deg;
 }
-.sobreMi__container__h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  color: #ffff;
-}
-.sobreMi__container__h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 0.5em;
-}
-.sobreMi__container__p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #000000;
-  line-height: 1.5em;
-}
-.sobreMi__container__p-span {
-  color: #000000;
-  font-weight: 700;
-}
-.sobreMi__container__a {
-  align-self: center;
-  color: #ffff;
-  display: inline-block;
-  font-family: "Roboto", sans-serif;
-  margin-top: 1em;
-  font-weight: 500;
-}
-.sobreMi__container__ul {
-  margin-top: 0.8em;
-  margin-left: 1em;
-}
-.sobreMi__container__ul__li {
-  list-style: circle;
-  margin-top: 0.2em;
-}
-.sobreMi__container__ul__li__a {
-  color: #000000;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-}
-
 /* ========  MEDIA QUERIES ======== */
 /* ======== Main ======== */
 @media (max-width: 575.98px) {
 }
 
 @media (max-width: 767.98px) {
+  .sobreMi__h2 {
+    font-size: var(--step--1);
+  }
   .sobreMi__container {
     width: 100%;
-    position: relative;
-    padding: 10px 40px;
   }
   .sobreMi__left {
     left: 0;
@@ -391,64 +372,30 @@ body {
   .sobreMi__right {
     left: 0;
   }
-
   .sobreMi::before {
-    content: " ";
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    background-color: #000000;
     top: 0;
-    left: 15px;
-  }
-  .sobreMi__left::after {
-    content: " ";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    left: 5px;
-    top: 43%;
-    background: #bb7dd4;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    left: 0;
+    margin-left: 1em;
   }
   .sobreMi__left::before {
-    content: " ";
-    position: absolute;
-    width: 40px;
-    height: 25px;
-    left: 25px;
-    top: 43%;
-    background-color: #bb7dd4;
-    clip-path: polygon(50% 0%, 0 72%, 100% 72%);
-    rotate: -90deg;
+    left: 0;
+    margin-left: 1.5em;
+    transform: rotate(180deg);
   }
-  .sobreMi__right::after {
-    content: " ";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    left: 5px;
-    top: 43%;
-    background: #bb7dd4;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+  .sobreMi__left::after {
+    left: 8px;
+    top: 44%;
+    width: 20px;
+    height: 20px;
   }
   .sobreMi__right::before {
-    content: " ";
-    position: absolute;
-    width: 40px;
-    height: 25px;
-    left: 25px;
-    top: 43%;
-    background-color: #bb7dd4;
-    clip-path: polygon(50% 0%, 0 72%, 100% 72%);
-    rotate: -90deg;
+    left: 0;
+    margin-left: 1.5em;
+  }
+  .sobreMi__right::after {
+    left: 8px;
+    top: 44%;
+    width: 20px;
+    height: 20px;
   }
 }
